@@ -1,0 +1,121 @@
+ul{
+    list-style-type: none;
+}
+#tutorial{
+    visibility: hidden;
+    position: absolute;
+    background-color: grey;
+    color: white;
+    top: 570px;
+}
+#battle_log{
+    width: 49%;
+    height: 500px;
+    float: left;
+    overflow: auto;
+    text-align: center
+}
+#buttons{
+    position: absolute;
+    top: 550px;
+    left: 25%;
+    width: 50%;
+    font-family: 'Dancing Script', cursive;
+}
+#stats {
+    width: 22%;
+    float: left;
+    font-size: 20px;
+    text-align: center;
+    overflow: auto;
+    height: 735px;
+    min-width: 272px;
+    position: absolute;
+    top: 165px;
+    font-family: 'Dancing Script', cursive;
+}
+#enemy_stats {
+    width: 22%;
+    float: right;
+    font-size: 20px;
+    text-align: center;
+    overflow: auto;
+    height: 735px;
+    min-width: 272px;
+    left: 23%;
+    position: relative;
+    top: -352px;
+    font-family: 'Dancing Script', cursive;
+}
+li{
+    display: inline-block;
+    margin-left: 5px;
+    margin-right: 5px; 
+}
+#battle_log_text{
+    font-size: 24px;
+}
+#battle_log_text_enemy{
+    font-size: 24px;
+    color: red;
+}
+#upgrade_buttons{
+    visibility: hidden;
+}
+#stats_img{
+    height: 1000px;
+    float: left;
+    width: 25%;
+    left: 1320px;
+}
+#enemy_stats_img{
+    height: 1000px;
+    float: right;
+    width: 25%;
+}
+body{
+    min-width: 1200px;
+    background-image: url(background.jpg);
+}
+#attack_speed_upgrade_button{
+    visibility: hidden;
+}
+#attack{
+    width: 100%;
+    font-size: 30px;
+    font-family: 'Lobster Two', cursive;
+}
+#heal{
+    width: 100%;
+    font-size: 30px;
+    font-family: 'Lobster Two', cursive;
+}
+#upgrade_point_text{
+    font-size: 30px;
+    text-align: center;
+}
+#damage_button{
+    width: 100%;
+    font-size: 30px;
+    font-family: 'Lobster Two', cursive;
+}
+#chance_block_button{
+    width: 100%;
+    font-size: 30px;
+    font-family: 'Lobster Two', cursive;
+}
+#chance_hit_button{
+    width: 100%;
+    font-size: 30px;
+    font-family: 'Lobster Two', cursive;
+}
+#health_button{
+    width: 100%;
+    font-size: 30px;
+    font-family: 'Lobster Two', cursive;
+}
+#attack_speed_upgrade_button{
+    width: 100%;
+    font-size: 30px;    
+    font-family: 'Lobster Two', cursive;
+}

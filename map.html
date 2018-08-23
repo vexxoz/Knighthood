@@ -1,0 +1,154 @@
+<html>
+<head>
+    <link href="map_css.css" rel="stylesheet" type="text/css" />
+    <link href='http://fonts.googleapis.com/css?family=Dancing+Script|Lobster+Two:700italic' rel='stylesheet' type='text/css'>
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>    
+    <title>Duelest</title>
+</head>
+<body>    
+    
+    <!--- Map and towns div -->
+    <div id="all_map">
+        <img src="info_pictures.jpg" id="stats_img_map">
+        <div id="stats_map">
+            <ul>
+                <li>Name: <p id="name_map"></p></li>
+                <li>Rank: <p id="rank_map"></p></li>
+                <li>Damage: <p id="damage_map"></p></li>
+                <li>Chance Block: <p id="chance_block_map"></p></li>
+                <li>Attack Speed: <p id="attack_speed_map"></p></li>
+                <li>Chance Hit: <p id="chance_hit_map"></p></li>
+                <li>Health: <p id="health_map"></p></li>
+                <li>Gold: <p id="gold_map"></p></li>
+                <li>Current Experience: <p id="current_experience_map"></p></li>
+                <li>Total Experience until Level up: <p id="level_up_experience_map"></p></li>
+                <br>
+                <h3>Your Items:</h3>
+                <ul id="items_map">
+                </ul>
+            </ul>
+        </div>
+        <div id="map_and_marks">
+            <img src="blakes_map.png" id="blakes_map">    
+            <img src="character_icon.png" id="character_icon">    
+            <div id="garethdale"></div>
+            <div id="rotterhye"></div>
+            <div id="oldfernan"></div>
+            <div id="shireston"></div>
+        </div>
+        <div id="garethdale_town">
+            <h1>Welcome to Garethdale!</h1>
+            <p>Garethdale is the renown hub of shops and bartery. Merchants travel great distances to make it to this legendary castle and city. Walking down the streets one can see local merchants trading their load. Farmers buying new tools. Blacksmiths hammering away on their anvils creating a new device for combat. The smell of the air is rich, the people are easy going and friendly. Garethdale is truely a economic and culture capital of the Valteri Empire!</p>
+            <button id="duel" onclick="duel()">Duel</button>
+            <button id="tavern" onclick="tavern()">Stay a night in the Tavern $75</button>
+            <button id="shop" onclick="shop()">Shop</button>
+            <ul id="shop_list">
+                <li id="store_item"><button id="store_button" onclick="lightning_sword()">Lightning Sword $4500</button></li>
+                <li id="store_item"><button id="store_button" onclick="fire_blade()">Fire Blade $2500</button></li>
+                <li id="store_item"><button id="store_button" onclick="mace_forgotten_souls()">Mace of Forgotten Souls $7000</button></li>
+            </ul>
+            <button id="back_to_map" onclick="back_to_map()">Back to Map</button>
+        </div>    
+        <div id="rotterhye_town">
+            <h1>Welcome to Rotterhye!</h1>
+            <p>Rotterhye is a military fort. With its high towers and overwhelming number of trops, its a fortress not to be triffled with. Here lies warriors and knights seeking to train with the best, at a high cost. The local people are prideful and seek independece from Valteri. Any king loyalist would tell you to stay away from this place. </p>
+            <button id="duel" onclick="duel()">Duel</button>
+            <button id="training_camp" onclick="training_camp()">Training Camp</button>
+            <ul id="training_list">
+                <li id="training_item"><button id="store_button" onclick="train_hit_chance()">Train Hit Chance $5000</button></li>
+                <li id="training_item"><button id="store_button" onclick="train_block_chance()">Train Block Chance $6000</button></li>
+                <li id="training_item"><button id="store_button" onclick="train_attack_speed()">Train Attack Speed $10000</button></li>
+                <li id="training_item"><button id="store_button" onclick="train_damage()">Train Damage $4000</button></li>
+            </ul>            
+            <button id="tavern" onclick="tavern()">Stay a night in the Tavern $75</button>
+            <button id="back_to_map" onclick="back_to_map()">Back to Map</button>
+        </div>    
+        <div id="shireston_town">
+            <h1>Welcome to Shireston!</h1>
+            <p>Shireston is the Capital of the Valteri Empire and is home to King Walter. The town thrives and is the most populated in all of the Empire. Shireston is the second largest economic powerhouse behind Garethdale. With the current tension between Rotterhye and the Empire guard count is doubled. </p>
+            <button id="duel" onclick="duel()">Duel</button>
+            <button id="king_button" onclick="()">Request to talk with the King</button>
+            <button id="tavern" onclick="tavern()">Stay a night in the Tavern $75</button>
+            <button id="back_to_map" onclick="back_to_map()">Back to Map</button>
+        </div>    
+        <div id="oldfernan_town">
+            <h1>Welcome to Oldfernan!</h1>
+            <p>Oldfernan is a quiet community. Full of lush parks and fountains. Not much happens and the locals like it that way. They are loyal to the king but have no prejudice against the rebels. You have less of a chance of finding a duel here.</p>
+            <button id="duel" onclick="duel()">Duel</button>
+            <button id="tavern" onclick="tavern()">Stay a night in the Tavern $75</button>
+            <button id="back_to_map" onclick="back_to_map()">Back to Map</button>
+        </div>
+        <div id="story_log"></div>
+    </div>
+    
+    
+    <!--- Battle Screen div -->
+    <div id="battle_screen">
+        <!--- player stats div -->
+        <img src="info_pictures.jpg" id="stats_img">
+        <div id="stats">
+            <ul>
+                <li>Name: <p id="name"></p></li>
+                <li>Rank: <p id="rank"></p></li>
+                <li>Damage: <p id="damage"></p></li>
+                <li>Chance Block: <p id="chance_block"></p></li>
+                <li>Attack Speed: <p id="attack_speed"></p></li>
+                <li>Chance Hit: <p id="chance_hit"></p></li>
+                <li>Health: <p id="health"></p></li>
+                <li>Gold: <p id="gold"></p></li>
+                <li>Current Experience: <p id="current_experience"></p></li>
+                <li>Total Experience until Level up: <p id="level_up_experience"></p></li>
+                <br>
+                <h3>Your Items:</h3>
+                <ul id="items">
+                </ul>
+            </ul>
+        </div>
+        <!--- log div -->
+        <div id="right">
+            <div id="battle_log">
+
+            </div>
+            <!--- enemy stats div -->
+            <img src="info_pictures.jpg" id="enemy_stats_img">
+            <div id="enemy_stats">
+                <ul>
+                    <li>Name: <p id="enemy_name"></p></li>
+                    <li>Rank: <p id="enemy_rank"></p></li>
+                    <li>Damage: <p id="enemy_damage"></p></li>
+                    <li>Chance Block: <p id="enemy_chance_block"></p></li>
+                    <li>Attack Speed: <p id="enemy_attack_speed"></p></li>
+                    <li>Chance Hit: <p id="enemy_chance_hit"></p></li>
+                    <li>Health: <p id="enemy_health"></p></li>
+                    <li>Experiance Gain: <p id="experience_gain"></p></li>
+                </ul>
+            </div>
+        </div>
+        <!--- Button div -->
+        <div id="buttons">
+            <button id="attack" class="" title="A normal attack on your enemy" onclick="attack()">Attack</button>
+            <br>
+            <button id="heal" class="" title="Skip your turn and heal your self 2hp" onclick="heal()">Heal</button>
+            <br>
+            <p id="upgrade_point_text">Number of upgrade Points: <a id="upgrade_points"></a></p>
+            <div id="upgrade_buttons">
+                <br>
+                <button id="damage_button" class="" onclick="upgrade_damage()">Upgrade Damage</button>
+                <br>
+                <button id="chance_block_button" class="" onclick="upgrade_chance_block()">Upgrade Block</button>
+                <br>
+                <button id="chance_hit_button" class="" onclick="upgrade_chance_hit()">Upgrade Hit</button>
+                <br>
+                <button id="health_button" class="" onclick="upgrade_health()">Upgrade Health</button>
+                <br>
+                <div>
+                    <button id="attack_speed_upgrade_button" class="" onclick="attack_speed_upgrade()">Upgrade Attack Speed</button>
+                </div>
+            </div>
+        </div>      
+    </div>
+</body>
+<script src="javascript.js"></script>
+<script src="functions.js" type="text/javascript"></script>
+</html>

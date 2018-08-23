@@ -1,0 +1,296 @@
+#stats_img_map {
+    transform: rotate(90deg);
+    left: 748px;
+    width: 18%;
+    height: 1600px;
+    position: absolute;
+    min-width: 270px;
+    float: left;
+    visibility: hidden;    
+}
+#stats_map {
+    float: left;
+    font-size: 20px;
+    text-align: center;
+    overflow: auto;
+    height: 735px;
+    min-width: 272px;
+    position: absolute;
+    top: 682px;
+    font-family: "Dancing Script",cursive;
+    width: 1500px;
+    left: 125px;
+    visibility: hidden;
+}
+ul{
+    list-style-type: none;
+}
+li{
+    display: inline-block;
+    margin-left: 5px;
+    margin-right: 5px; 
+}
+body{
+    min-width: 1200px;
+    background-image: url(background.jpg);
+}
+#garethdale {
+    width: 85px;
+    height: 80px;
+    position: relative;
+    left: 85px;
+    top: -431px;
+    cursor: pointer;
+}
+#rotterhye {
+    width: 85px;
+    height: 80px;
+    position: relative;
+    left: 135px;
+    top: -295px;
+    cursor: pointer;
+}
+#oldfernan {
+    width: 85px;
+    height: 80px;
+    position: relative;
+    left: 453px;
+    top: -426px;
+    cursor: pointer;
+}
+#shireston {
+    width: 85px;
+    height: 80px;
+    position: relative;
+    left: 612px;
+    top: -715px;
+    cursor: pointer;
+}
+#map_and_marks {
+    width: 800px;
+    height: 500px;
+    float: left;
+    position: absolute;
+    top: 80px;
+    left: 550px;
+    visibility: hidden;
+}
+#garethdale_town {
+    width: 800px;
+    height: 500px;
+    float: left;
+    position: absolute;
+    top: 80px;
+    left: 550px;
+    visibility: hidden;
+}
+#rotterhye_town {
+    width: 800px;
+    height: 500px;
+    float: left;
+    position: absolute;
+    top: 80px;
+    left: 550px;
+    visibility: hidden;
+}
+#shireston_town {
+    width: 800px;
+    height: 500px;
+    float: left;
+    position: absolute;
+    top: 80px;
+    left: 550px;
+    visibility: hidden;
+}
+#oldfernan_town {
+    width: 800px;
+    height: 500px;
+    float: left;
+    position: absolute;
+    top: 80px;
+    left: 550px;
+    visibility: hidden;
+}
+#character_icon {
+    width: 60px;
+    height: 60px;
+    position: relative;
+    top: -367px;
+    left: 148px;
+    color: white;
+}
+#back_to_map{
+    width: 100%;
+    font-size: 30px;
+    font-family: 'Lobster Two', cursive;
+}
+#duel{
+    width: 100%;
+    font-size: 30px;
+    font-family: 'Lobster Two', cursive;
+}
+#shop{
+    width: 100%;
+    font-size: 30px;
+    font-family: 'Lobster Two', cursive;
+}
+#training_camp{
+    width: 100%;
+    font-size: 30px;
+    font-family: 'Lobster Two', cursive;
+}
+#king_button{
+    width: 100%;
+    font-size: 30px;
+    font-family: 'Lobster Two', cursive;
+}
+#tavern{
+    width: 100%;
+    font-size: 30px;
+    font-family: 'Lobster Two', cursive;
+}
+#battle_screen{
+    visibility: hidden;
+}
+#tutorial{
+    visibility: hidden;
+    position: absolute;
+    background-color: grey;
+    color: white;
+    top: 570px;
+}
+#battle_log{
+    width: 49%;
+    height: 500px;
+    float: left;
+    overflow: auto;
+    text-align: center
+}
+#buttons{
+    position: absolute;
+    top: 550px;
+    left: 25%;
+    width: 50%;
+    font-family: 'Dancing Script', cursive;
+}
+#stats {
+    width: 22%;
+    float: left;
+    font-size: 20px;
+    text-align: center;
+    overflow: auto;
+    height: 735px;
+    min-width: 272px;
+    position: absolute;
+    top: 165px;
+    font-family: 'Dancing Script', cursive;
+}
+#enemy_stats {
+    width: 22%;
+    float: right;
+    font-size: 20px;
+    text-align: center;
+    overflow: auto;
+    height: 735px;
+    min-width: 272px;
+    left: 23%;
+    position: relative;
+    top: -352px;
+    font-family: 'Dancing Script', cursive;
+}
+li{
+    display: inline-block;
+    margin-left: 5px;
+    margin-right: 5px; 
+}
+#battle_log_text{
+    font-size: 24px;
+}
+#battle_log_text_enemy{
+    font-size: 24px;
+    color: red;
+}
+#upgrade_buttons{
+    visibility: hidden;
+}
+#stats_img{
+    height: 1000px;
+    float: left;
+    width: 25%;
+    left: 1320px;
+}
+#enemy_stats_img{
+    height: 1000px;
+    float: right;
+    width: 25%;
+}
+#attack_speed_upgrade_button{
+    visibility: hidden;
+}
+#attack{
+    width: 100%;
+    font-size: 30px;
+    font-family: 'Lobster Two', cursive;
+}
+#heal{
+    width: 100%;
+    font-size: 30px;
+    font-family: 'Lobster Two', cursive;
+}
+#upgrade_point_text{
+    font-size: 30px;
+    text-align: center;
+}
+#damage_button{
+    width: 100%;
+    font-size: 30px;
+    font-family: 'Lobster Two', cursive;
+}
+#chance_block_button{
+    width: 100%;
+    font-size: 30px;
+    font-family: 'Lobster Two', cursive;
+}
+#chance_hit_button{
+    width: 100%;
+    font-size: 30px;
+    font-family: 'Lobster Two', cursive;
+}
+#health_button{
+    width: 100%;
+    font-size: 30px;
+    font-family: 'Lobster Two', cursive;
+}
+#attack_speed_upgrade_button{
+    width: 100%;
+    font-size: 30px;    
+    font-family: 'Lobster Two', cursive;
+}
+#shop_list{
+    visibility: hidden;
+    position: absolute;
+}
+#store_item{
+    width: 46%
+}
+#store_button{
+    height: 40px;
+    width: 100%;
+}
+#training_item{
+    width: 46%
+}
+#training_list{
+    visibility: hidden;
+    position: absolute;
+}
+#story_log{
+    position: absolute;
+    visibility: visible;
+    width: 800px;
+    height: 500px;
+    float: left;
+    position: absolute;
+    top: 80px;
+    left: 550px;    
+}

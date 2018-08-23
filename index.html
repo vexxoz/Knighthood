@@ -1,0 +1,72 @@
+<html>
+<head>
+    <title>KnightHood</title>
+    <link href="index_css.css" rel="stylesheet" type="text/css" />
+    <link href='http://fonts.googleapis.com/css?family=Dancing+Script|Lobster+Two:700italic' rel='stylesheet' type='text/css'>
+</head>
+<body>
+    <!--- player stats div -->
+    <img src="info_pictures.jpg" id="stats_img">
+    <div id="stats">
+        <ul>
+            <li>Name: <p id="name"></p></li>
+            <li>Rank: <p id="rank"></p></li>
+            <li>Damage: <p id="damage"></p></li>
+            <li>Chance Block: <p id="chance_block"></p></li>
+            <li>Attack Speed: <p id="attack_speed"></p></li>
+            <li>Chance Hit: <p id="chance_hit"></p></li>
+            <li>Health: <p id="health"></p></li>
+            <li>Gold: <p id="gold"></p></li>
+            <li>Current Experience: <p id="current_experience"></p></li>
+            <li>Total Experience until Level up: <p id="level_up_experience"></p></li>
+            <br>
+            <h3>Your Items:</h3>
+            <ul id="items">
+            </ul>
+        </ul>
+    </div>
+    <!--- log div -->
+    <div id="right">
+        <div id="battle_log">
+
+        </div>
+        <!--- enemy stats div -->
+        <img src="info_pictures.jpg" id="enemy_stats_img">
+        <div id="enemy_stats">
+            <ul>
+                <li>Name: <p id="enemy_name"></p></li>
+                <li>Rank: <p id="enemy_rank"></p></li>
+                <li>Damage: <p id="enemy_damage"></p></li>
+                <li>Chance Block: <p id="enemy_chance_block"></p></li>
+                <li>Attack Speed: <p id="enemy_attack_speed"></p></li>
+                <li>Chance Hit: <p id="enemy_chance_hit"></p></li>
+                <li>Health: <p id="enemy_health"></p></li>
+                <li>Experiance Gain: <p id="experience_gain"></p></li>
+            </ul>
+        </div>
+    </div>
+    <!--- Button div -->
+    <div id="buttons">
+        <button id="attack" class="" title="A normal attack on your enemy" onclick="attack()">Attack</button>
+        <br>
+        <button id="heal" class="" title="Skip your turn and heal your self 2hp" onclick="heal()">Heal</button>
+        <br>
+        <p id="upgrade_point_text">Number of upgrade Points: <a id="upgrade_points"></a></p>
+        <div id="upgrade_buttons">
+            <br>
+            <button id="damage_button" class="" onclick="upgrade_damage()">Upgrade Damage</button>
+            <br>
+            <button id="chance_block_button" class="" onclick="upgrade_chance_block()">Upgrade Block</button>
+            <br>
+            <button id="chance_hit_button" class="" onclick="upgrade_chance_hit()">Upgrade Hit</button>
+            <br>
+            <button id="health_button" class="" onclick="upgrade_health()">Upgrade Health</button>
+            <br>
+            <div>
+                <button id="attack_speed_upgrade_button" class="" onclick="attack_speed_upgrade()">Upgrade Attack Speed</button>
+            </div>
+        </div>
+    </div>   
+</body>
+<script src="functions.js" type="text/javascript"></script>
+</html>
